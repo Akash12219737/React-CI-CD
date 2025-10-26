@@ -24,3 +24,9 @@ jobs:
 
       - name: "Clone the repositary"
         uses: actions/checkout@v2
+      
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "List directories"
+        run: ls  
