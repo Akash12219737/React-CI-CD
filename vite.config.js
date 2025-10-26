@@ -1,6 +1,3 @@
-// <reference types="vitest" />
-// <reference types="vite/client" />
-
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
@@ -11,7 +8,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/setupTests.js',
     deps: {
-      inline: ['parse5', 'jsdom'], //  fixes ESM import issue
+      inline: ['parse5', 'jsdom'], 
     },
   },
 });
