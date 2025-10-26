@@ -23,4 +23,4 @@ jobs:
         run: node --version
 
       - name: "CLone the repositary"
-        run: action/checkout@v2
+        run: actions/checkout@v2
