@@ -3,16 +3,18 @@ name: "Sample React CI pipeline/workflow"
 on:
   push:
     branches:
-      - main:
-      - master:
+      - main
+      - master
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-  
+
     steps:
-      - nmae: "Setup Node JS"
-        uses: action/setup-node@v4
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
         with:
           node-version: '21'
-          
-          
