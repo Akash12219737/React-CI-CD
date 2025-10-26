@@ -20,11 +20,15 @@
 //   expect(buttonElement).toHaveTextContent('count is 2');
 // });
 
-import { render, screen } from '@testing-library/react';
-import App from '../App';
+import { render, screen } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
+import App from "../App";
 
-test('renders hello message', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/hello/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App Component", () => {
+  test("renders Vite + React heading", () => {
+    render(<App />);
+    const heading = screen.getByText(/Vite \+ React/i);
+    expect(heading).toBeInTheDocument();
+  });
 });
+
